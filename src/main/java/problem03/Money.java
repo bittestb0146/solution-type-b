@@ -10,10 +10,35 @@ public class Money {
 	private int amount;
 	
 	public Money(int amount) {
+		this.amount = amount;
+	}
+	
+	
+
+	@Override
+	public boolean equals(Object obj) {
+		if(! (obj instanceof Money)) {
+			return false;
+		}else if(obj == this) {
+			return true;
+		}
+		return false;
 	}
 
+
+
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+
+
+
 	public Money add(Money money) {
-		return null;
+		Money mon = money;
+		
+		
+		return money;
 	}
 
 	public Money minus(Money money) {
